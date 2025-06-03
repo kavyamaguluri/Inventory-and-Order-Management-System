@@ -29,14 +29,12 @@ public class ItemController {
         return new ResponseEntity<>(itemService.createItem(request), HttpStatus.CREATED);
     }
 
-
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}")
     public ResponseEntity<ItemResponse> updateItem(@PathVariable("id") Long id, @RequestBody ItemRequest request) {
-    return ResponseEntity.ok(itemService.updateItem(id, request));
+        return ResponseEntity.ok(itemService.updateItem(id, request));
     }
 
-    
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteItem(@PathVariable(name = "id") Long id) {

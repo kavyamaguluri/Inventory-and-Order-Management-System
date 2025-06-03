@@ -13,7 +13,7 @@ import lombok.Setter;
 public class ItemResponse {
     private Long id;
     private String name;
-    
+
     @NotNull
     private int quantity;
     private double price;

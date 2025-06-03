@@ -38,6 +38,5 @@ public class Order {
     private List<OrderItem> items;
 
     private double totalPrice;
-
     private LocalDateTime timestamp;
 }
